@@ -1,5 +1,7 @@
 "use client";
 import React from "react";
+import Lenis from "lenis";
+import { useEffect } from "react";
 
 // import { useTranslations } from 'next-intl'
 import CustomLink from "./components/customLink";
@@ -11,6 +13,16 @@ import Client from "./components/client";
 import Item from "./components/item";
 
 const Home = (props) => {
+  //effect to implement smooth scrolling
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }, []);
+
   return (
     <>
       <div className="home-container">
@@ -278,8 +290,6 @@ const Home = (props) => {
                   title="Aliquaduis"
                 ></Item>
                 <Item tags="Strategy / Copywriting" title="Consequat"></Item>
-               
-                
               </div>
             </div>
             <div className="home-row2">
