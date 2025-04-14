@@ -23,13 +23,32 @@ const Home = (props) => {
     requestAnimationFrame(raf);
   }, []);
 
+  //effect to implement fade-in page loading effect
+  useEffect(() => {
+    const handleLoad = () => {
+      document.body.classList.remove("loading");
+      document.body.classList.add("loaded");
+
+      // try restore scroll
+      const savedY = sessionStorage.getItem("scrollY");
+      if (savedY) {
+        window.scrollTo({ top: Number(savedY), behavior: "auto" });
+      }
+    };
+
+    document.body.classList.add("loading");
+
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      window.addEventListener("load", handleLoad);
+      return () => window.removeEventListener("load", handleLoad);
+    }
+  }, []);
+
   return (
     <>
       <div className="home-container">
-        {/* <Head>
-          <title>Agency modern template</title>
-          <meta property="og:title" content="Agency modern template" />
-        </Head> */}
         <header className="home-header1">
           <header data-thq="thq-navbar" className="home-navbar-interactive">
             <div className="home-branding1">
