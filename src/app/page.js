@@ -124,13 +124,13 @@ const Home = (props) => {
             </p>
           </div>
         </header>
-        {/* <div className="home-video1">
+        <div className="home-video1">
           <video
             src="./your-video.mp4"
             poster="./cofeefudge.jpg"
             className="home-video2"
           ></video>
-        </div> */}
+        </div>
         <div className="home-description2">
           <div className="home-content">
             <div className="home-text21">
