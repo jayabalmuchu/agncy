@@ -124,24 +124,27 @@ const Home = (props) => {
             </p>
           </div>
         </header>
-        <div className="home-video1">
+        {/* <div className="home-video1">
           <video
             src="./your-video.mp4"
             poster="./cofeefudge.jpg"
             className="home-video2"
           ></video>
-        </div>
+        </div> */}
         <div className="home-description2">
           <div className="home-content">
             <div className="home-text21">
               <p className="home-paragraph1">
-                We are a team of aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat.
+                At Agncy, we don't just build brands—we shape bold identities,
+                craft unforgettable stories, and engineer seamless digital
+                experiences.
               </p>
               <p className="home-paragraph2">
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia deserunt mollit anim id est laborum. Nemo enim ipsam
-                voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+                We're a multidisciplinary team of strategists, designers,
+                copywriters, and developers who thrive at the intersection of
+                creativity and conversion. Whether you're launching something
+                new or reinventing what already exists, we bring sharp strategy
+                and knockout visuals to the table.
               </p>
             </div>
             <button className="start-button button home-button4">
@@ -162,17 +165,24 @@ const Home = (props) => {
           <div className="home-list1">
             <Work
               image="./redjuice.jpg"
-              title="RED ICED TEA"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+              title="ICED TEA"
+              description="A new iced tea brand was ready to shake up the beverage aisle—bold flavors, real ingredients, and a laid-back vibe. They needed a look, voice, and digital presence as refreshing as the drink itself."
             ></Work>
-            <Work image="./dogfood.jpg" title="ZENG"></Work>
-            <Work image="./gojobojodrink.jpg" title="YORGU"></Work>
+            <Work
+              image="./dogfood.jpg"
+              title="TailFuel"
+              description="From playful packaging to scroll-stopping ads, TailFuel now speaks to modern pet parents who read labels, follow dogfluencers, and want the best for their furry companions."
+            ></Work>
+            <Work
+              image="./gojobojodrink.jpg"
+              title="YORGU"
+              description="From a zesty brand identity to scroll-stopping copy and a website that feels like a sugar rush, we bottled their wild energy and served it chilled. Every visual. Every word. Every scroll. Pure dopamine."
+            ></Work>
           </div>
         </div>
         <div className="home-client">
           <p className="home-text23">
-            Become a client aute irure dolor in reprehenderit in voluptate velit
-            esse cillum dolore eu fugiat.
+          We partner with brands who are ready to stand out—not blend in. If you're looking for strategic thinking, knockout visuals, and copy that actually converts, you're in the right place.
           </p>
           <button className="start-button button home-button5">
             <span className="home-text24">Start a project</span>
@@ -213,13 +223,7 @@ const Home = (props) => {
           <div className="home-header5">
             <h2 className="home-company3">AGNCY</h2>
             <span className="home-description3">
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.”
+              “we believe in building with purpose. Every brand we shape, every word we write, every pixel we design is driven by intention. We're not here for surface-level work—we're here to craft clarity, connection, and creative that actually moves people. We blend strategy with soul, design with depth, and execution with excellence. Curiosity fuels us, collaboration grounds us, and bold ideas push us forward. Whether we're building a brand from scratch or evolving an existing one, we show up with integrity, ambition, and a deep respect for the story behind the business. Because to us, great work isn't just what it looks like—it's what it does.”
             </span>
             <Author></Author>
           </div>
@@ -267,32 +271,32 @@ const Home = (props) => {
             <div className="home-grid2">
               <div className="home-column1">
                 <Client
-                  quote="“Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit “"
+                  quote="“Working with Agncy was a game-changer for our brand. They understood our vision from the get-go and brought it to life in ways we didn't even imagine. From the fresh branding to the website that speaks our language, they've elevated our presence in the market. We feel seen, heard, and truly understood. “"
                   author="Coco White"
                   avatar="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDV8fHBvdHJhaXR8ZW58MHx8fHwxNjY5MDYxMjQx&amp;ixlib=rb-4.0.3&amp;h=200"
-                  mention="@zeng"
+                  mention="@yorgu.official"
                   rootClassName="clientroot-class-name"
                 ></Client>
                 <Client
-                  quote="“Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.“"
+                  quote="“The team at Agncy is exceptional. They didn't just deliver a sleek website—we gained a comprehensive brand strategy that aligned perfectly with our values. Their attention to detail and the way they structured our digital presence made an immediate impact. We've seen an increase in client engagement and inquiries since the launch. They truly partner with you for success.“"
                   author="Coco White"
                   avatar="https://images.unsplash.com/photo-1607957159143-de3859adca2d?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDIwfHxwb3RyYWl0fGVufDB8fHx8MTY2OTA2MTI0MQ&amp;ixlib=rb-4.0.3&amp;h=200"
-                  mention="@white_co"
+                  mention="@tailfuel.co"
                   rootClassName="clientroot-class-name1"
                 ></Client>
               </div>
               <div className="home-column2">
                 <Client
-                  quote="“Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.”"
+                  quote="“If you're looking for a creative team that takes risks, delivers exceptional results, and has a knack for storytelling, look no further. The copywriting, the design, the whole digital experience—everything they created felt so us.”"
                   author="Jennifer Marle"
                   avatar="https://images.unsplash.com/photo-1619946794135-5bc917a27793?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDE5fHxwb3RyYWl0fGVufDB8fHx8MTY2OTA2MTI0MQ&amp;ixlib=rb-4.0.3&amp;h=200"
                   mention="@motech"
                 ></Client>
                 <Client
-                  quote="“Sed do eiusmod tempor incididunt ut labore et dolore magna aliquaduis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.”"
+                  quote="“From the moment we started working with Agncy, we knew we were in good hands. They took the time to really understand our audience and goals, and it showed in everything they created.”"
                   author="Maria Martinez"
                   avatar="https://images.unsplash.com/photo-1634746715098-6cafbc6a7a00?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDIxfHxwb3RyYWl0fGVufDB8fHx8MTY2OTA2MTI0MQ&amp;ixlib=rb-4.0.3&amp;h=200"
-                  mention="@yorgu.official"
+                  mention="@coffefudge.hq"
                 ></Client>
               </div>
             </div>
