@@ -7,7 +7,6 @@ import { useEffect } from "react";
 import CustomLink from "./components/customLink";
 import Work from "./components/work";
 import Service from "./components/service";
-import Author from "./components/author";
 import Statistic from "./components/statistic";
 import Client from "./components/client";
 import Item from "./components/item";
@@ -225,7 +224,7 @@ const Home = (props) => {
             <span className="home-description3">
               “we believe in building with purpose. Every brand we shape, every word we write, every pixel we design is driven by intention. We're not here for surface-level work—we're here to craft clarity, connection, and creative that actually moves people. We blend strategy with soul, design with depth, and execution with excellence. Curiosity fuels us, collaboration grounds us, and bold ideas push us forward. Whether we're building a brand from scratch or evolving an existing one, we show up with integrity, ambition, and a deep respect for the story behind the business. Because to us, great work isn't just what it looks like—it's what it does.”
             </span>
-            <Author></Author>
+           
           </div>
           <div className="home-statistics">
             <button className="start-button button home-button6">
