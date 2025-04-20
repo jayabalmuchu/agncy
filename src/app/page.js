@@ -134,14 +134,14 @@ const Home = (props) => {
           <div className="home-content">
             <div className="home-text21">
               <p className="home-paragraph1">
-                At Agncy, we don't just build brands—we shape bold identities,
+                At Agncy, we don&#39;t just build brands—we shape bold identities,
                 craft unforgettable stories, and engineer seamless digital
                 experiences.
               </p>
               <p className="home-paragraph2">
-                We're a multidisciplinary team of strategists, designers,
+                We&#39;re a multidisciplinary team of strategists, designers,
                 copywriters, and developers who thrive at the intersection of
-                creativity and conversion. Whether you're launching something
+                creativity and conversion. Whether you&#39;re launching something
                 new or reinventing what already exists, we bring sharp strategy
                 and knockout visuals to the table.
               </p>
@@ -181,7 +181,7 @@ const Home = (props) => {
         </div>
         <div className="home-client">
           <p className="home-text23">
-          We partner with brands who are ready to stand out—not blend in. If you're looking for strategic thinking, knockout visuals, and copy that actually converts, you're in the right place.
+          We partner with brands who are ready to stand out—not blend in. If you&#39;re looking for strategic thinking, knockout visuals, and copy that actually converts, you&#39;re in the right place.
           </p>
           <button className="start-button button home-button5">
             <span className="home-text24">Start a project</span>
@@ -222,7 +222,7 @@ const Home = (props) => {
           <div className="home-header5">
             <h2 className="home-company3">AGNCY</h2>
             <span className="home-description3">
-              “we believe in building with purpose. Every brand we shape, every word we write, every pixel we design is driven by intention. We're not here for surface-level work—we're here to craft clarity, connection, and creative that actually moves people. We blend strategy with soul, design with depth, and execution with excellence. Curiosity fuels us, collaboration grounds us, and bold ideas push us forward. Whether we're building a brand from scratch or evolving an existing one, we show up with integrity, ambition, and a deep respect for the story behind the business. Because to us, great work isn't just what it looks like—it's what it does.”
+              “we believe in building with purpose. Every brand we shape, every word we write, every pixel we design is driven by intention. We&#39;re not here for surface-level work—we&#39;re here to craft clarity, connection, and creative that actually moves people. We blend strategy with soul, design with depth, and execution with excellence. Curiosity fuels us, collaboration grounds us, and bold ideas push us forward. Whether we&#39;re building a brand from scratch or evolving an existing one, we show up with integrity, ambition, and a deep respect for the story behind the business. Because to us, great work isn&#39;t just what it looks like—it&#39;s what it does.”
             </span>
            
           </div>
@@ -270,14 +270,14 @@ const Home = (props) => {
             <div className="home-grid2">
               <div className="home-column1">
                 <Client
-                  quote="“Working with Agncy was a game-changer for our brand. They understood our vision from the get-go and brought it to life in ways we didn't even imagine. From the fresh branding to the website that speaks our language, they've elevated our presence in the market. We feel seen, heard, and truly understood. “"
+                  quote="“Working with Agncy was a game-changer for our brand. They understood our vision from the get-go and brought it to life in ways we didn&#39;t even imagine. From the fresh branding to the website that speaks our language, they&#39;ve elevated our presence in the market. We feel seen, heard, and truly understood. “"
                   author="Coco White"
                   avatar="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDV8fHBvdHJhaXR8ZW58MHx8fHwxNjY5MDYxMjQx&amp;ixlib=rb-4.0.3&amp;h=200"
                   mention="@yorgu.official"
                   rootClassName="clientroot-class-name"
                 ></Client>
                 <Client
-                  quote="“The team at Agncy is exceptional. They didn't just deliver a sleek website—we gained a comprehensive brand strategy that aligned perfectly with our values. Their attention to detail and the way they structured our digital presence made an immediate impact. We've seen an increase in client engagement and inquiries since the launch. They truly partner with you for success.“"
+                  quote="“The team at Agncy is exceptional. They didn&#39;t just deliver a sleek website—we gained a comprehensive brand strategy that aligned perfectly with our values. Their attention to detail and the way they structured our digital presence made an immediate impact. We&#39;ve seen an increase in client engagement and inquiries since the launch. They truly partner with you for success.“"
                   author="Coco White"
                   avatar="https://images.unsplash.com/photo-1607957159143-de3859adca2d?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDIwfHxwb3RyYWl0fGVufDB8fHx8MTY2OTA2MTI0MQ&amp;ixlib=rb-4.0.3&amp;h=200"
                   mention="@tailfuel.co"
@@ -286,7 +286,7 @@ const Home = (props) => {
               </div>
               <div className="home-column2">
                 <Client
-                  quote="“If you're looking for a creative team that takes risks, delivers exceptional results, and has a knack for storytelling, look no further. The copywriting, the design, the whole digital experience—everything they created felt so us.”"
+                  quote="“If you&#39;re looking for a creative team that takes risks, delivers exceptional results, and has a knack for storytelling, look no further. The copywriting, the design, the whole digital experience—everything they created felt so us.”"
                   author="Jennifer Marle"
                   avatar="https://images.unsplash.com/photo-1619946794135-5bc917a27793?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDE5fHxwb3RyYWl0fGVufDB8fHx8MTY2OTA2MTI0MQ&amp;ixlib=rb-4.0.3&amp;h=200"
                   mention="@motech"
