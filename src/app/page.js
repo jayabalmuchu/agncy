@@ -2,17 +2,19 @@
 import React from "react";
 import Lenis from "lenis";
 import { useState, useEffect, useRef } from "react";
-
-// import { useTranslations } from 'next-intl'
 import CustomLink from "./components/customLink";
 import Work from "./components/work";
 import Service from "./components/service";
 import Statistic from "./components/statistic";
 import Client from "./components/client";
 import Item from "./components/item";
+import StartProject from "./components/startProject";
 
 const Home = (props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  //start a project button ->
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const workRef = useRef(null);
   const servicesRef = useRef(null);
@@ -26,6 +28,14 @@ const Home = (props) => {
       document.body.style.overflow = "auto";
     }
   }, [isMenuOpen]);
+
+  //start a project button -> form
+  const handleButtonClick = () => {
+    setIsModalOpen(true); // Open the modal when button is clicked
+  };
+  const handleCloseModal = () => {
+    setIsModalOpen(false); // Close the modal
+  };
 
   //effect to implement smooth scrolling
   useEffect(() => {
@@ -111,7 +121,10 @@ const Home = (props) => {
                   Contact
                 </span>
               </div>
-              <button className="start-button button home-button1">
+              <button
+                className="start-button button home-button1"
+                onClick={handleButtonClick}
+              >
                 <span className="home-text14">Start a project</span>
               </button>
             </div>
@@ -129,7 +142,7 @@ const Home = (props) => {
                   alt="menu--v1"
                   className="home-image1"
                 />
-                <span className="home-text15">Start a project</span>
+                <span className="home-text15" >Start a project</span>
               </button>
             </div>
 
@@ -211,7 +224,10 @@ const Home = (props) => {
                         Contact
                       </span>
                     </div>
-                    <button className="start-button button home-button3">
+                    <button
+                      className="start-button button home-button3"
+                      onClick={handleButtonClick}
+                    >
                       <span className="home-text20">Start a project</span>
                     </button>
                   </div>
@@ -254,7 +270,7 @@ const Home = (props) => {
                 strategy and knockout visuals to the table.
               </p>
             </div>
-            <button className="start-button button home-button4">
+            <button className="start-button button home-button4" onClick={handleButtonClick}>
               <span className="home-text22">Start a project</span>
             </button>
           </div>
@@ -293,7 +309,7 @@ const Home = (props) => {
             you&#39;re looking for strategic thinking, knockout visuals, and
             copy that actually converts, you&#39;re in the right place.
           </p>
-          <button className="start-button button home-button5">
+          <button className="start-button button home-button5" onClick={handleButtonClick}>
             <span className="home-text24">Start a project</span>
           </button>
         </div>
@@ -471,7 +487,7 @@ const Home = (props) => {
                 <span className="home-caption2">Let&apos;s talk</span>
                 <span className="home-value2">sayhello@agncy.address</span>
               </div>
-              <button className="home-button7 start-button button">
+              <button className="home-button7 start-button button" onClick={handleButtonClick}>
                 <span className="home-text28">Start a project</span>
               </button>
             </div>
@@ -489,6 +505,7 @@ const Home = (props) => {
             className="home-image2 w-190 "
           />
         </footer>
+        <StartProject isOpen={isModalOpen} onClose={handleCloseModal} />
       </div>
       <style jsx>
         {`
