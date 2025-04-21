@@ -125,8 +125,11 @@ const Home = (props) => {
         </header>
         <div className="home-video1">
           <video
-            src="./your-video.mp4"
-            poster="./cofeefudge.jpg"
+            src="./agncy.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
             className="home-video2"
           ></video>
         </div>
