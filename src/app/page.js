@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Lenis from "lenis";
-import { useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 // import { useTranslations } from 'next-intl'
 import CustomLink from "./components/customLink";
@@ -12,6 +12,13 @@ import Client from "./components/client";
 import Item from "./components/item";
 
 const Home = (props) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const workRef = useRef(null);
+  const servicesRef = useRef(null);
+  const aboutRef = useRef(null);
+  const contactRef = useRef(null);
+
   //effect to implement smooth scrolling
   useEffect(() => {
     const lenis = new Lenis();
@@ -60,19 +67,53 @@ const Home = (props) => {
               />
               <span className="home-company1">Agncy</span>
             </div>
+
             <div className="home-items1">
               <div className="home-links1">
-                <span className="nav-link">Work</span>
-                <span className="nav-link">Services</span>
-                <span className="nav-link">About</span>
-                <span className="nav-link">Contact</span>
+                <span
+                  className="nav-link"
+                  onClick={() =>
+                    workRef.current?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  Work
+                </span>
+                <span
+                  className="nav-link"
+                  onClick={() =>
+                    servicesRef.current?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  Services
+                </span>
+                <span
+                  className="nav-link"
+                  onClick={() =>
+                    aboutRef.current?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  About
+                </span>
+                <span
+                  className="nav-link"
+                  onClick={() =>
+                    contactRef.current?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  Contact
+                </span>
               </div>
               <button className="start-button button home-button1">
                 <span className="home-text14">Start a project</span>
               </button>
             </div>
+
+            {/* Burger Menu Butto/n */}
             <div data-thq="thq-burger-menu" className="home-burger-menu">
-              <button className="home-button2 button">
+              <button
+                className="home-button2 button"
+                onClick={() => setIsMenuOpen(true)}
+              >
                 <img
                   width="24"
                   height="24"
@@ -83,36 +124,92 @@ const Home = (props) => {
                 <span className="home-text15">Start a project</span>
               </button>
             </div>
-            <div data-thq="thq-mobile-menu" className="home-mobile-menu">
+
+            {/* Mobile Menu */}
+            {isMenuOpen && (
               <div
-                data-thq="thq-mobile-menu-nav"
-                data-role="Nav"
-                className="home-nav"
+                data-thq="thq-mobile-menu"
+                className={`home-mobile-menu ${isMenuOpen ? "active" : ""}`}
               >
-                <div className="home-top">
-                  <div className="home-branding2">
-                    <img alt="image" src="/logo.svg" className="home-logo2" />
-                    <span className="home-company2">SPYRL</span>
+                <div
+                  data-thq="thq-mobile-menu-nav"
+                  data-role="Nav"
+                  className="home-nav"
+                >
+                  <div className="home-top">
+                    <div className="home-branding2">
+                      <img
+                        alt="image"
+                        src="https://img.icons8.com/dotty/80/FFFFFF/circled.png"
+                        className="home-logo2"
+                      />
+                      <span className="home-company2">AGNCY</span>
+                    </div>
+                    <div
+                      data-thq="thq-close-menu"
+                      className="home-menu-close"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <svg viewBox="0 0 1024 1024" className="home-icon1">
+                        <path d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"></path>
+                      </svg>
+                    </div>
                   </div>
-                  <div data-thq="thq-close-menu" className="home-menu-close">
-                    <svg viewBox="0 0 1024 1024" className="home-icon1">
-                      <path d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"></path>
-                    </svg>
+
+                  <div className="home-items2">
+                    <div className="home-links2">
+                      <span
+                        className="nav-link"
+                        onClick={() => {
+                          workRef.current?.scrollIntoView({
+                            behavior: "smooth",
+                          });
+                          setIsMenuOpen(false);
+                        }}
+                      >
+                        Work
+                      </span>
+                      <span
+                        className="nav-link"
+                        onClick={() => {
+                          servicesRef.current?.scrollIntoView({
+                            behavior: "smooth",
+                          });
+                          setIsMenuOpen(false);
+                        }}
+                      >
+                        Services
+                      </span>
+                      <span
+                        className="nav-link"
+                        onClick={() => {
+                          aboutRef.current?.scrollIntoView({
+                            behavior: "smooth",
+                          });
+                          setIsMenuOpen(false);
+                        }}
+                      >
+                        About
+                      </span>
+                      <span
+                        className="nav-link"
+                        onClick={() => {
+                          contactRef.current?.scrollIntoView({
+                            behavior: "smooth",
+                          });
+                          setIsMenuOpen(false);
+                        }}
+                      >
+                        Contact
+                      </span>
+                    </div>
+                    <button className="start-button button home-button3">
+                      <span className="home-text20">Start a project</span>
+                    </button>
                   </div>
-                </div>
-                <div className="home-items2">
-                  <div className="home-links2">
-                    <span className="nav-link">Work</span>
-                    <span className="nav-link">Services</span>
-                    <span className="nav-link">About</span>
-                    <span className="nav-link">Contact</span>
-                  </div>
-                  <button className="start-button button home-button3">
-                    <span className="home-text20">Start a project</span>
-                  </button>
                 </div>
               </div>
-            </div>
+            )}
           </header>
         </header>
         <header className="home-hero">
@@ -137,16 +234,16 @@ const Home = (props) => {
           <div className="home-content">
             <div className="home-text21">
               <p className="home-paragraph1">
-                At Agncy, we don&#39;t just build brands—we shape bold identities,
-                craft unforgettable stories, and engineer seamless digital
-                experiences.
+                At Agncy, we don&#39;t just build brands—we shape bold
+                identities, craft unforgettable stories, and engineer seamless
+                digital experiences.
               </p>
               <p className="home-paragraph2">
                 We&#39;re a multidisciplinary team of strategists, designers,
                 copywriters, and developers who thrive at the intersection of
-                creativity and conversion. Whether you&#39;re launching something
-                new or reinventing what already exists, we bring sharp strategy
-                and knockout visuals to the table.
+                creativity and conversion. Whether you&#39;re launching
+                something new or reinventing what already exists, we bring sharp
+                strategy and knockout visuals to the table.
               </p>
             </div>
             <button className="start-button button home-button4">
@@ -164,7 +261,7 @@ const Home = (props) => {
               ></CustomLink>
             </div>
           </div>
-          <div className="home-list1">
+          <div className="home-list1" ref={workRef}>
             <Work
               image="./redjuice.jpg"
               title="ICED TEA"
@@ -184,13 +281,15 @@ const Home = (props) => {
         </div>
         <div className="home-client">
           <p className="home-text23">
-          We partner with brands who are ready to stand out—not blend in. If you&#39;re looking for strategic thinking, knockout visuals, and copy that actually converts, you&#39;re in the right place.
+            We partner with brands who are ready to stand out—not blend in. If
+            you&#39;re looking for strategic thinking, knockout visuals, and
+            copy that actually converts, you&#39;re in the right place.
           </p>
           <button className="start-button button home-button5">
             <span className="home-text24">Start a project</span>
           </button>
         </div>
-        <div className="home-services">
+        <div className="home-services" ref={servicesRef}>
           <div className="home-header4">
             <h2 className="heading">SERVICES</h2>
           </div>
@@ -221,13 +320,22 @@ const Home = (props) => {
             ></Service>
           </div>
         </div>
-        <div className="home-about">
+        <div className="home-about" ref={aboutRef}>
           <div className="home-header5">
             <h2 className="home-company3">AGNCY</h2>
             <span className="home-description3">
-              “we believe in building with purpose. Every brand we shape, every word we write, every pixel we design is driven by intention. We&#39;re not here for surface-level work—we&#39;re here to craft clarity, connection, and creative that actually moves people. We blend strategy with soul, design with depth, and execution with excellence. Curiosity fuels us, collaboration grounds us, and bold ideas push us forward. Whether we&#39;re building a brand from scratch or evolving an existing one, we show up with integrity, ambition, and a deep respect for the story behind the business. Because to us, great work isn&#39;t just what it looks like—it&#39;s what it does.”
+              “we believe in building with purpose. Every brand we shape, every
+              word we write, every pixel we design is driven by intention.
+              We&#39;re not here for surface-level work—we&#39;re here to craft
+              clarity, connection, and creative that actually moves people. We
+              blend strategy with soul, design with depth, and execution with
+              excellence. Curiosity fuels us, collaboration grounds us, and bold
+              ideas push us forward. Whether we&#39;re building a brand from
+              scratch or evolving an existing one, we show up with integrity,
+              ambition, and a deep respect for the story behind the business.
+              Because to us, great work isn&#39;t just what it looks
+              like—it&#39;s what it does.”
             </span>
-           
           </div>
           <div className="home-statistics">
             <button className="start-button button home-button6">
@@ -332,7 +440,7 @@ const Home = (props) => {
             </div>
           </div>
         </div>
-        <footer className="home-footer">
+        <footer className="home-footer" ref={contactRef}>
           <div className="home-information">
             <div className="home-details">
               <div className="home-header8">
@@ -436,6 +544,9 @@ const Home = (props) => {
             align-items: center;
             flex-direction: row;
           }
+          .nav-link {
+            cursor: pointer;
+          }
           .home-text14 {
             color: #ffffff;
           }
@@ -471,13 +582,16 @@ const Home = (props) => {
             height: 100vh;
             display: flex;
             padding: 32px;
-            z-index: 100;
+            z-index: 900;
             position: fixed;
             transform: translateX(100%);
             transition: 0.5s;
             flex-direction: column;
             justify-content: space-between;
             background-color: #151515;
+          }
+          .home-mobile-menu.active {
+            transform: translateX(0%);
           }
           .home-nav {
             display: flex;
