@@ -19,6 +19,14 @@ const Home = (props) => {
   const aboutRef = useRef(null);
   const contactRef = useRef(null);
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isMenuOpen]);
+
   //effect to implement smooth scrolling
   useEffect(() => {
     const lenis = new Lenis();
@@ -589,6 +597,7 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: space-between;
             background-color: #151515;
+            overflow-y: auto;
           }
           .home-mobile-menu.active {
             transform: translateX(0%);
