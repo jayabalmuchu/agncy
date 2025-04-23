@@ -320,26 +320,32 @@ const Home = (props) => {
           <div className="home-grid1">
             <Service
               title="Branding"
+              description="We help you define who you are, what you stand for, and how you show up in the world consistently and confidently. Because branding isn&#39;t just a logo, it&#39;s the story people remember."
               rootClassName="serviceroot-class-name"
             ></Service>
             <Service
               title="Strategy"
+              description=" By uncovering what drives your audience and what sets you apart, we develop clear, actionable plans that turn ideas into measurable results. No guesswork, just focused direction with purpose."
               rootClassName="serviceroot-class-name1"
             ></Service>
             <Service
               title="Marketing"
+              description="Our marketing approach blends strategy, storytelling, and data to create campaigns that connect with the right people. From awareness to conversion, we help your brand stay seen, heard, and chosen."
               rootClassName="serviceroot-class-name5"
             ></Service>
             <Service
               title="Copywriting"
+              description="Words matter and we make every one count. From brand voice development to high-converting campaigns, we craft copy that speaks with clarity, personality, and purpose."
               rootClassName="serviceroot-class-name2"
             ></Service>
             <Service
               title="UI / UX"
+              description="We design experiences that feel as good as they look. From user flows to final interfaces, we blend form and function to create intuitive, on-brand journeys that keep users engaged."
               rootClassName="serviceroot-class-name3"
             ></Service>
             <Service
               title="Web Development"
+              description="We bring ideas to life with fast, flexible, and fully custom websites. Built for performance and scalability, our approach ensures your brand doesn&#39;t just show up online, it leads."
               rootClassName="serviceroot-class-name4"
             ></Service>
           </div>
@@ -348,7 +354,7 @@ const Home = (props) => {
           <div className="home-header5">
             <h2 className="home-company3">AGNCY</h2>
             <span className="home-description3">
-              “we believe in building with purpose. Every brand we shape, every
+              we believe in building with purpose. Every brand we shape, every
               word we write, every pixel we design is driven by intention.
               We&#39;re not here for surface-level work—we&#39;re here to craft
               clarity, connection, and creative that actually moves people. We
@@ -358,11 +364,11 @@ const Home = (props) => {
               scratch or evolving an existing one, we show up with integrity,
               ambition, and a deep respect for the story behind the business.
               Because to us, great work isn&#39;t just what it looks
-              like—it&#39;s what it does.”
+              like—it&#39;s what it does.
             </span>
           </div>
           <div className="home-statistics">
-            <button className="start-button button home-button6">
+            <button className="start-button button home-button6" onClick={handleButtonClick}>
               <span className="home-text25">Join our team</span>
             </button>
             <div className="home-statistic-list">
