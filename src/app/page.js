@@ -142,7 +142,7 @@ const Home = (props) => {
                   alt="menu--v1"
                   className="home-image1"
                 />
-                <span className="home-text15" >Start a project</span>
+                <span className="home-text15">Start a project</span>
               </button>
             </div>
 
@@ -270,7 +270,10 @@ const Home = (props) => {
                 strategy and knockout visuals to the table.
               </p>
             </div>
-            <button className="start-button button home-button4" onClick={handleButtonClick}>
+            <button
+              className="start-button button home-button4"
+              onClick={handleButtonClick}
+            >
               <span className="home-text22">Start a project</span>
             </button>
           </div>
@@ -309,7 +312,10 @@ const Home = (props) => {
             you&#39;re looking for strategic thinking, knockout visuals, and
             copy that actually converts, you&#39;re in the right place.
           </p>
-          <button className="start-button button home-button5" onClick={handleButtonClick}>
+          <button
+            className="start-button button home-button5"
+            onClick={handleButtonClick}
+          >
             <span className="home-text24">Start a project</span>
           </button>
         </div>
@@ -368,7 +374,10 @@ const Home = (props) => {
             </span>
           </div>
           <div className="home-statistics">
-            <button className="start-button button home-button6" onClick={handleButtonClick}>
+            <button
+              className="start-button button home-button6"
+              onClick={handleButtonClick}
+            >
               <span className="home-text25">Join our team</span>
             </button>
             <div className="home-statistic-list">
@@ -493,7 +502,10 @@ const Home = (props) => {
                 <span className="home-caption2">Let&apos;s talk</span>
                 <span className="home-value2">sayhello@agncy.address</span>
               </div>
-              <button className="home-button7 start-button button" onClick={handleButtonClick}>
+              <button
+                className="home-button7 start-button button"
+                onClick={handleButtonClick}
+              >
                 <span className="home-text28">Start a project</span>
               </button>
             </div>
